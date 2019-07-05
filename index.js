@@ -1,5 +1,6 @@
 
 //variables
+
 let nameofperson = "nir";
 console.log(nameofperson);
 
