@@ -175,3 +175,30 @@ else
             
     }
 
+//for loop
+for (let i =0 ; i <5 ; i++){       //when i=0 it checks if its below 5 then prints hello world. i++ is the one which increments, which means it increases the value of i to 1,2,3 and 4. That's the reason hello world is printed 5 times
+    console.log("hello world");
+}
+
+//display of odd numbers using for loop
+for(let i =0; i <= 5 ; i++){
+    if(i%2 !== 0) 
+    console.log(i);
+}
+
+
+//while loop
+//display of odd numbers
+let i =0 ;
+while(i<=5 ){
+    if (i%2 !==0 )
+    console.log(i);
+    i++;                           //do not forget to increment because if we don't then we might crash the program
+}
+
+//do-while loop
+let i = 0;                             //do not run this code as it will giv error because i has already been decleared in line 191 
+do {
+    if (i % 2 !== 0) console.log(i);
+    i++
+}while(i <= 5)
