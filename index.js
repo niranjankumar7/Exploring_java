@@ -202,3 +202,22 @@ do {
     if (i % 2 !== 0) console.log(i);
     i++
 }while(i <= 5)
+
+//break
+let i =0 ;                           // //do not run this code as it will give error because 'i' has already been decleared in line 199
+while (i <= 10 ){
+    if ( i ===5) break ;
+    console.log(i);
+    i++;
+}
+
+//continue
+let i =0;
+while ( i <= 10 ){
+    if (i % 2 === 0){
+        i++;
+        continue;
+    }
+console.log(i);
+i++;
+}    
