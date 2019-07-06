@@ -1,0 +1,58 @@
+//max of 2 numbers
+
+let number = max(5 , 8);
+console.log(number);
+function max(a , b) {
+return ( a > b) ? a : b;
+}
+
+//landscape or not
+console.log(islandscape(800 , 1000));
+
+function islandscape(width , height){
+    return (width > height);
+}
+
+
+//fizzbuzz
+//divisible by 3 - fizz
+//divisible by 5 - buzz
+//divisible by both 3 and 5 - fizzbuzz
+//not divisible by 3 or 5 - input
+//not a number - not a number
+
+const output = fizzbuzz(false);
+console.log(output);
+function fizzbuzz(input){
+
+    if(input % 3 === 0 && input % 5 === 0)
+    return "fizzbuzz";
+
+    if(typeof input !== 'number')
+    return 'not a number';
+
+    if (input % 3 === 0)
+    return 'fizz';
+
+    if(input % 5 === 0)
+    return 'buzz';
+
+    return input;
+}
+
+//speed check 
+checkspeed (80);
+function checkspeed(speed){
+    const speedlimit = 70;
+    const kmperpoint = 5;
+
+    if ( speed < speedlimit + kmperpoint)
+    console.log("ok");
+    else {
+        const points = Math.floor((speed - speedlimit) / kmperpoint);
+        if (points >= 12)
+        console.log("license suspended");
+        else 
+        console.log("points", points);
+    }
+}
