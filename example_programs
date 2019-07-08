@@ -56,3 +56,107 @@ function checkspeed(speed){
         console.log("points", points);
     }
 }
+
+//odd and even number
+shownumber(10);
+function shownumber(limit){
+    for ( let i = 0; i <= limit ; i++ ){
+        if (i % 2 === 0) console.log(i , 'even');
+        else console.log(i, 'odd');
+    
+    }
+}
+
+//count truthy
+const array = [0 , null , undefined , "" , 2, 3];
+
+console.log(counttruthy(array));
+
+function counttruthy(array){
+let count =0 ;
+for ( let value of array)
+if (value)
+count ++;
+return count;
+}
+
+
+//string properties
+const movie = {
+    title : "a",
+    releaseyear : 2019,
+    rating : 4.3 ,
+    director : "b"
+};
+
+function showproperties(obj){
+    for (let key in obj)
+    if (typeof obj[key] === "string")
+    console.log(key , obj[key]);
+}
+
+//sum of multiples of 3 and 5
+console.log(sum(10));
+
+function sum(limit){
+    let sum = 0;
+
+    for ( let i =0 ; i<= limit ; i++)
+     if ( i % 3 ===0 || i % 5 === 0)
+         sum += i;
+   return sum;
+}
+
+//grade of student
+
+const marks = [ 80 , 80 ,50];
+
+console.log(calculategrade( marks));
+
+function calculategrade(marks){
+    let sum = 0;
+    for( let mark of marks)
+    summ += mark;
+    let average = sum/ marks.length;
+
+
+    if (average < 60 ) return 'F';
+    if (average < 70 ) return 'D';
+    if (average < 80 ) return 'C';
+    if (average < 90 ) return 'B';
+    return 'A';
+
+}
+
+//stars
+
+showstars(5);
+function showstars(rows){
+    for (let row = 1 ; row <+ rows; row++){          //nested loop
+        let pattern = "";
+        for ( let i = 0 ; i < row ; i++)
+        pattern += '*';
+        console.log(pattern);
+    }
+}
+
+//prime number
+
+showprimes(20);
+function showprimes(limit){
+    for( let number = 2 ; number <= limit ; number++){
+        //2 - cuurent (i)
+
+        let isprime = true ;
+        for(let factor = 2 ; factor < number ; factor ++){
+            if (number % factor === 0 ){
+                isprime = false ; 
+                break;
+            }
+            
+        }
+
+        if( isprime) console.log(number);
+    }
+
+}
