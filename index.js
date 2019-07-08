@@ -221,3 +221,63 @@ while ( i <= 10 ){
 console.log(i);
 i++;
 }    
+
+//objects in detail
+//basic example of object oriented programming
+
+const circle = {
+    radius : 1,
+    location : {
+        x : 1,
+        y : 2 
+    },
+    isvisible : true,
+    draw : function(){
+        console.log("draw");
+
+    }
+};
+
+circle.draw();   //method of calling something from object
+
+//factory function
+function createcircle(radius){
+    return {
+        radius,
+        draw(){                   //creating a function inside function
+            console.log("draw");   
+        }
+    };
+}
+
+const circle1 = createcircle(1);  //here 1 is the radius of the circle
+console.log(circle1);
+
+//constructor function
+function Circle(radius){
+    this.radius = radius;
+    this.draw = function(){
+        console.log("draw");
+    }
+}
+ const circle = new Circle(1);     //new is keyword, create empty js object . 'this' is pointed towards the new . 
+
+ //dynamic nature of objects
+ //we can always add other properties in the object
+ //we can even add new function in the object 
+ //can delete or edit existing properties or methods or function in a object
+//we cannot reset 'circle ' to new object in this case because circle is a constant 
+ const circle = {
+     radius = 1;
+ };
+
+ circle.color = "yellow";
+ circle.draw = function(){
+     console.log("drawing");
+ }
+
+ delete circle.color;              //"delete " is a keyword which can be used to delete 
+ delete circle.draw; 
+ 
+
+ //constructer 
