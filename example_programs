@@ -160,3 +160,71 @@ function showprimes(limit){
     }
 
 }
+
+//address object 
+//street
+//city
+//zipcode
+//showaddress ( address)
+
+let address = {
+       street : 'a',
+       city : "b ",
+       zipcode : "c"
+};
+
+function showaddress(address){
+    for (let key in address)
+    console.log(key , address[key]);
+}
+
+showaddress(address)
+
+//using factory function 
+let address = createaddress("a", "b" , "c");
+
+function createaddress(street , city , zipcode){
+    return {
+        street,
+        city,
+        zipcode
+    };
+}
+
+//constructor function
+let address = new Address("a", "b" , "c");
+
+console.log(address);
+function Address(street , city , zipcode){
+    this.street = street;
+    this.city = city;
+    this.zipcode = zipcode;
+
+}
+
+//object equality
+
+let address1 = new Address("a", "b", "c");
+let address2 = new Address("a", 'b' ,'c');
+
+console.log(areEqual(address1, address2));
+console.log(areSame(address1, address2));
+ 
+//constructor function
+function Address(street , city , zipcode){
+    this.street = street;
+    this.city = city;
+    this.zipcode = zipcode;
+
+}
+
+function areEqual(address1, address2){
+    return address1.street === address2.street &&
+    address1.city === address2.city &&
+    address1.zipcode === address2.zipcode;
+}
+
+
+function areSame( address1 , address2){
+    return address1 === address2;
+}
