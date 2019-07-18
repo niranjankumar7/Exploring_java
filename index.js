@@ -281,3 +281,55 @@ function Circle(radius){
  
 
  //constructer 
+function Circle(radius){
+    this.radius = radius;
+    this.draw = function(){
+        console.log("draw");
+    }
+}
+ const circle = new Circle(1);     //new is keyword, create empty js object . 'this' is pointed towards the new . 
+
+ //dynamic nature of objects
+ //we can always add other properties in the object
+ //we can even add new function in the object 
+ //can delete or edit existing properties or methods or function in a object
+//we cannot reset 'circle ' to new object in this case because circle is a constant 
+ const circle = {
+     radius = 1;
+ };
+
+ circle.color = "yellow";
+ circle.draw = function(){
+     console.log("drawing");
+ }
+
+ delete circle.color;              //"delete " is a keyword which can be used to delete 
+ delete circle.draw; 
+ 
+
+ //Arrays
+ //adding elements
+ //add elements in the beginning
+
+ const numbers = [3, 4];
+ //add elements in the beginning
+ numbers.unshift(1 ,2 );
+
+ //add elements in the ending
+ numbers.push(5,6);
+
+ //add elements in the middle
+ numbers.splice( 2 , 0 , "a" , "b"); //2 is the position where we can add elements , 0 is the number of data which we can delete and "a " and "b" are the ones added
+
+console.log(numbers);
+
+
+//finding elements
+const numbers = [1,2,3,1,4,5];
+
+console.log(numbers.indexOf(1));   //finding the number 1 from the start of the array. the index is 0 
+console.log(numbers.lastIndexOf(1));  //finds the number 1 from the last and gives its index. index of 1 from last is  3
+
+console.log(numbers.includes(1));   //to check if the number exists in the array. output will be true if it exists , false if it does'nt exist
+
+
