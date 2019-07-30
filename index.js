@@ -1,11 +1,11 @@
 
 //variables
 
-let nameofperson = "nir";
+let nameofperson = "nir";     //nameofperson is the variable, let is the keyword used to define variables
 console.log(nameofperson);
 
 //constant
-const interestrate =0.4;
+const interestrate =0.4;        //const is the keyword used to define constants
 console.log(interestrate);
 
 //primitives
